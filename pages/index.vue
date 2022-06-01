@@ -1,9 +1,13 @@
 <template>
-  <Tutorial />
+  <div></div>
 </template>
 
 <script>
 export default {
-  name: 'IndexPage',
-}
+  mounted() {
+    if (window.localStorage.getItem("access_token")) this.$router.push("/chat");
+    if (!window.localStorage.getItem("access_token"))
+      this.$router.push("/auth");
+  },
+};
 </script>

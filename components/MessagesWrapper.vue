@@ -5,7 +5,7 @@
 </template>
 
 <script>
-export default {}
+export default {};
 </script>
 
 <style lang="scss" module>
@@ -14,5 +14,6 @@ export default {}
   height: calc(100% - 70px);
   display: flex;
   flex-direction: column-reverse;
+  overflow-y: scroll;
 }
 </style>

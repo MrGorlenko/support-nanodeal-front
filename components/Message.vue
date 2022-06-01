@@ -3,7 +3,7 @@
     <p :class="$style['message-text']">
       {{ messageText }}
     </p>
-    <span :class="$style.time">{{ messageTime }}</span>
+    <span :class="$style.time">{{ setTimeFormat(messageTime) }}</span>
   </div>
 </template>
 
@@ -16,23 +16,28 @@ export default {
     },
     messageText: {
       type: String,
-      default: '',
+      default: "",
     },
     messageTime: {
       type: String,
-      default: '',
+      default: "",
     },
   },
-}
+  methods: {
+    setTimeFormat(time) {
+      return time.substring(11, 16);
+    },
+  },
+};
 </script>
 
 <style lang="scss" module>
 .message {
   position: relative;
-  border: 1px solid black;
   min-width: 100px;
   padding: 5px;
   padding-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 .message-text {
@@ -55,5 +60,6 @@ export default {
 .opponent {
   border-radius: 0px 5px 5px 5px;
   align-self: flex-start;
+  background: #fff;
 }
 </style>

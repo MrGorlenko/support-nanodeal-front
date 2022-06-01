@@ -9,24 +9,27 @@ export default {
   props: {
     formType: {
       type: String,
-      default: '',
+      default: "",
     },
   },
 
   methods: {
     submitForm() {
-      this.$emit('submit')
+      this.$emit("submit");
     },
   },
-}
+};
 </script>
 
 <style lang="scss" module>
 .auth-form {
   width: 300px;
   height: auto;
-  border: 1px solid black;
+  background: #faf5f2;
+  border: 6px solid rgba(39, 41, 49, 0.07);
+  border-radius: 20px;
   text-align: center;
+  background: #faf5f2;
 }
 
 .chat-form {
@@ -34,7 +37,6 @@ export default {
   position: absolute;
   left: 7px;
   bottom: 7px;
-  border: 1px solid black;
   display: flex;
   justify-content: space-around;
   height: 30px;

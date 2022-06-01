@@ -9,10 +9,10 @@ export default {
   props: {
     name: {
       type: String,
-      default: '',
+      default: "",
     },
   },
-}
+};
 </script>
 
 <style module lang="scss">
@@ -21,6 +21,7 @@ export default {
   width: 100%;
   height: 30px;
   padding: 5px;
-  border: 1px solid black;
+  box-shadow: 0px 2px 1px rgba(233, 216, 207, 0.4);
+  background: #fff;
 }
 </style>

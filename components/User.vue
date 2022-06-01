@@ -1,7 +1,7 @@
 <template>
   <div :class="[$style.user, toggled]" @click="click">
     <p :class="$style.name">{{ name }}</p>
-    <p :class="$style.time">{{ time }}</p>
+    <p :class="$style.time">{{ setTimeFormat(time) }}</p>
     <p :class="$style.message">{{ lastMessage }}</p>
   </div>
 </template>
@@ -11,11 +11,11 @@ export default {
   props: {
     name: {
       type: String,
-      default: '',
+      default: "",
     },
     time: {
       type: String,
-      default: '',
+      default: "",
     },
     active: {
       type: Boolean,
@@ -23,37 +23,42 @@ export default {
     },
     lastMessage: {
       type: String,
-      default: '',
+      default: "",
     },
   },
   computed: {
     toggled() {
-      if (this.active) return this.$style.active
-      return this.$style['non-active']
+      if (this.active) return this.$style.active;
+      return this.$style["non-active"];
     },
   },
   methods: {
     click() {
-      this.$emit('click')
+      this.$emit("click");
+    },
+    setTimeFormat(time) {
+      return time.substring(11, 16);
     },
   },
-}
+};
 </script>
 
 <style lang="scss" module>
 .user {
-  border: 1px solid black;
   width: 100%;
   height: 60px;
   position: relative;
   padding: 10px;
+  border-radius: 10px 0px 10px 0px;
 }
 
 .time {
   position: absolute;
-  right: 10px;
-  bottom: 10px;
+  right: 5px;
+  bottom: 5px;
   font-size: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .message {
@@ -68,6 +73,6 @@ export default {
 }
 
 .active {
-  background: rgb(132, 122, 122);
+  background: #ffe7e0;
 }
 </style>

@@ -12,42 +12,44 @@ export default {
   props: {
     type: {
       type: String,
-      default: 'text',
+      default: "text",
     },
     placeholder: {
       type: String,
-      default: '',
+      default: "",
     },
     inputType: {
       type: String,
-      default: '',
+      default: "",
     },
     value: {
-      default: '',
+      default: "",
       type: [Number, String],
     },
   },
   computed: {
     model: {
       get() {
-        return this.value
+        return this.value;
       },
       set(value) {
-        this.$emit('input', value)
+        this.$emit("input", value);
       },
     },
   },
-}
+};
 </script>
 
 <style lang="scss" module>
-.input-auth,
-.input-chat {
-  border: 1px solid black;
-  padding: 5px;
+.input-auth {
+  border: 1px dashed #eaecf1;
+  border-radius: 13px;
+  padding: 8px 16px;
 }
 
 .input-chat {
   width: 80%;
+  border-radius: 13px;
+  padding: 8px 16px;
 }
 </style>

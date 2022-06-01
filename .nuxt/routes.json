@@ -1,0 +1,23 @@
+[
+  {
+    "name": "auth",
+    "path": "/auth",
+    "component": "C:\\\\Users\\\\user\\\\Desktop\\\\support-nanodeal-front\\\\pages\\\\auth.vue",
+    "chunkName": "pages/auth",
+    "_name": "_b3699558"
+  },
+  {
+    "name": "chat",
+    "path": "/chat",
+    "component": "C:\\\\Users\\\\user\\\\Desktop\\\\support-nanodeal-front\\\\pages\\\\chat.vue",
+    "chunkName": "pages/chat",
+    "_name": "_b2ccd9f8"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Users\\\\user\\\\Desktop\\\\support-nanodeal-front\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_c2f2e854"
+  }
+]
